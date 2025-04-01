@@ -20,7 +20,7 @@ Location and time: CHS 41-268, Tuesday and Thursday @ 1pm-2:50am.
 [Dr. Hua Zhou](http://hua-zhou.github.io/)  
 Office: CHS 21-254A  
 Email: <huazhou@ucla.edu>  
-Office hours: Tue/Thu @ 12pm-12:50pm, in office.
+Office hours: Tue @ 12pm-12:50pm, Thu @ 3pm-4pm (tentatively).
 
 ### Teaching Assistant
 
@@ -73,7 +73,7 @@ There are no exams.
 
 ### Final Grade
 
-Grades will be based on homework (75%) and class participation (lecture/office hour questions, CampusWire) (25%).
+Grades will be based on homework (75%) and class participation (lecture attendance/questions, Slack, office hour) (25%).
 
 ### UCLA ADA Policy 
 

@@ -11,6 +11,8 @@ Location and time: CHS 41-268, Tuesday and Thursday @ 1pm-2:50am.
 
 BruinLearn: <https://bruinlearn.ucla.edu/courses/205298>
 
+Slack channel: <https://ucla.enterprise.slack.com/archives/C08L72FBPPF>
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ucla-biostat-257/2025spring/master)
 
 Readings:  
