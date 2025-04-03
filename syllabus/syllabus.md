@@ -26,7 +26,7 @@ Office hours: Tue @ 12pm-12:50pm, Thu @ 3pm-4pm (tentatively).
 
 Brendon Chau <brendonchau@ucla.edu>
 
-Office hours: Mon, Wed 1pm-2pm @ ???.
+Office hours: Wed, Fri 1pm-2pm @ ???.
 
 ### Course Topics
 
