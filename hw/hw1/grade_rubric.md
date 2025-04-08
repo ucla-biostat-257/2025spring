@@ -28,8 +28,6 @@
 
 ### Usage of Git: ??/10
 
-- Are branches (`master` and `develop`) correctly set up? Is the hw submission put into the `master` branch?
-
 - Are there enough commits? Are commit messages clear? 
           
 - Is the hw submission tagged? 
