@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr. Hua Zhou @ UCLA">
-<meta name="dcterms.date" content="2025-04-22">
+<meta name="dcterms.date" content="2025-05-13">
 
 <title>Summary of linear regression</title>
 <style>
@@ -3257,7 +3257,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 22, 2025</p>
+      <p class="date">May 13, 2025</p>
     </div>
   </div>
   
@@ -3459,20 +3459,32 @@ linreg_svd(y, X) = [-0.07196570434574735, -0.13575699455859377, -0.1882019968945
 </div>
 </div>
 </div>
-<div id="cell-12" class="cell" data-tags="[]">
+<div id="cell-12" class="cell" data-tags="[]" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@benchmark</span> <span class="fu">linreg_qr</span>(y, X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-13" class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@benchmark</span> <span class="fu">linreg_svd</span>(y, X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="15">
 <div class="ansi-escaped-output">
-<pre>BenchmarkTools.Trial: 190 samples with 1 evaluation per sample.
- Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">23.748 ms</span> … <span class="ansi-magenta-fg">33.134 ms</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 3.99%
- Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">26.067 ms              </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>1.57%
- Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">26.317 ms</span> ± <span class="ansi-green-fg"> 1.558 ms</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>1.83% ± 1.93%
-       ▂▂    ▁  ▂ █▆<span class="ansi-blue-fg">▄</span>▄<span class="ansi-green-fg">▃</span>▁                                       
-  ▄▃▁▅▅██▄█▇▅█▄██▇██<span class="ansi-blue-fg">█</span>█<span class="ansi-green-fg">█</span>█▅▆▆▇▆█▁▆▄▆▅▃▅▁▃▁▁▄▃▃▄▁▃▁▁▁▁▃▁▃▃▁▃▃▁▁▃ ▃
-  23.7 ms<span class="ansi-bright-black-fg">         Histogram: frequency by time</span>        31.4 ms <span class="ansi-bold">&lt;</span>
+<pre>BenchmarkTools.Trial: 360 samples with 1 evaluation per sample.
+ Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">12.866 ms</span> … <span class="ansi-magenta-fg">45.692 ms</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">13.332 ms              </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">13.901 ms</span> ± <span class="ansi-green-fg"> 2.718 ms</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>1.43% ± 3.46%
+  ▅██▇<span class="ansi-blue-fg">▆</span>▄▄▃<span class="ansi-green-fg">▂</span> ▃▁▂  ▁                                             
+  ████<span class="ansi-blue-fg">█</span>███<span class="ansi-green-fg">█</span>█████▆█▇▆▄▄▄▆▆▆▄▄▆▁▁▄▁▁▁▆▁▁▁▁▁▁▄▁▄▁▁▁▁▁▁▄▁▁▁▁▁▁▁▁▄ ▇
+  12.9 ms<span class="ansi-bright-black-fg">      </span><span class="ansi-bright-black-fg">Histogram: </span><span class="ansi-bright-black-fg ansi-bold">log(</span><span class="ansi-bright-black-fg">frequency</span><span class="ansi-bright-black-fg ansi-bold">)</span><span class="ansi-bright-black-fg"> by time</span>      20.3 ms <span class="ansi-bold">&lt;</span>
+ Memory estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">2.49 MiB</span>, allocs estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">32</span>.</pre>
+</div>
+</div>
+</div>
+<div id="cell-13" class="cell" data-tags="[]" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@benchmark</span> <span class="fu">linreg_svd</span>(y, X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="ansi-escaped-output">
+<pre>BenchmarkTools.Trial: 191 samples with 1 evaluation per sample.
+ Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">24.808 ms</span> … <span class="ansi-magenta-fg"> 30.799 ms</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">25.986 ms               </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>1.52%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">26.180 ms</span> ± <span class="ansi-green-fg">851.641 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>1.92% ± 2.00%
+          ▃▄▄▁▂█<span class="ansi-blue-fg">▆</span>▃ <span class="ansi-green-fg"> </span> ▂                                          
+  ▃▄▄▃▁▆▄▆██████<span class="ansi-blue-fg">█</span>█▇<span class="ansi-green-fg">▅</span>▇█▇▄▄▇▅▄▅▃▄▃▁▄▄▄▁▁▄▁▃▁▃▁▁▃▁▃▁▁▁▁▁▁▁▁▁▁▁▁▁▃ ▃
+  24.8 ms<span class="ansi-bright-black-fg">         Histogram: frequency by time</span>         29.7 ms <span class="ansi-bold">&lt;</span>
  Memory estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">8.12 MiB</span>, allocs estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">27</span>.</pre>
 </div>
 </div>
@@ -3585,6 +3597,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
