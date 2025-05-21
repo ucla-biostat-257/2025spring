@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Student Name and UID">
-<meta name="dcterms.date" content="2025-05-20">
+<meta name="dcterms.date" content="2025-05-21">
 
 <title>Biostat/Biomath M257 Homework 5</title>
 <style>
@@ -3260,7 +3260,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 20, 2025</p>
+      <p class="date">May 21, 2025</p>
     </div>
   </div>
   
@@ -3326,7 +3326,7 @@ Environment:
 <p>Consider a linear model <span class="math display">\[\begin{eqnarray*}
     y_i = \mathbf{x}_i^T \boldsymbol{\beta} + \epsilon_i, \quad i = 1,\ldots, n,
 \end{eqnarray*}\]</span> where <span class="math inline">\(\epsilon_i\)</span> are independent Gaussian noises with common variance <span class="math inline">\(\sigma^2\)</span>. It is well known that the least squares estimate <span class="math inline">\(\hat{\boldsymbol{\beta}}\)</span> is unbiased and has covariance <span class="math inline">\(\sigma^2 (\sum_{i=1}^n \mathbf{x}_i \mathbf{x}_i^T)^{-1}\)</span>.</p>
-<p>In <strong>exact optimal design</strong>, given total number of <span class="math inline">\(n\)</span> allowable experiments, we want to choose among a list of <span class="math inline">\(m\)</span> candidate design points <span class="math inline">\(\{\mathbf{x}_1, \ldots, \mathbf{x}_m\}\)</span> such that the covariance matrix is minimized in some sense. In mathematical terms, we want to find an integer vector <span class="math inline">\(\mathbf{n} = (n_1, \ldots, n_m)\)</span> such that <span class="math inline">\(n_i \ge 0\)</span>, <span class="math inline">\(\sum_{i=1}^m n_i = n\)</span>, and the matrix <span class="math inline">\(\mathbf{V} = \left( \sum_{i=1}^m n_i \mathbf{x}_i \mathbf{x}_i^T \right)^{-1}\)</span> is “small”.</p>
+<p>In <strong>exact optimal design</strong>, given total number of <span class="math inline">\(n\)</span> allowable experiments, we want to choose among a list of <span class="math inline">\(m\)</span> candidate design points <span class="math inline">\(\{\mathbf{x}_1, \ldots, \mathbf{x}_m\}\)</span> such that the covariance matrix is minimized in some sense. In mathematical terms, we want to find an integer vector <span class="math inline">\(\mathbf{n} = (n_1, \ldots, n_m)\)</span> such that <span class="math inline">\(n_i \ge 0\)</span>, <span class="math inline">\(\sum_{i=1}^m n_i = n\)</span>, and the matrix <span class="math inline">\(\mathbf{V} = \left( \sum_{i=1}^m n_i \mathbf{x}_i \mathbf{x}_i^T \right)^{-1}\)</span> is “small.”</p>
 <p>In <strong>approximate optimal design</strong>, we want to find a probability vector <span class="math inline">\(\mathbf{p} = (p_1, \ldots, p_m)\)</span> such that <span class="math inline">\(p_i \ge 0\)</span>, <span class="math inline">\(\sum_{i=1}^m p_i = 1\)</span>, and the matrix <span class="math inline">\(\mathbf{V} = \left( \sum_{i=1}^m p_i \mathbf{x}_i \mathbf{x}_i^T \right)^{-1}\)</span> is “small.”</p>
 <p>Commonly used optimal design criteria include:</p>
 <ul>
